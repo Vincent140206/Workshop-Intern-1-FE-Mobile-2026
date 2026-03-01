@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workshop_1/halaman.dart';
+import 'package:workshop_1/hands_on.dart';
 import 'package:workshop_1/stateful.dart';
 import 'package:workshop_1/stateless.dart';
 
@@ -41,6 +42,16 @@ class Homepage extends StatelessWidget {
                 );
               },
               child: const Text("Navigasi Halaman"),
+            ),
+            SizedBox(height: 50),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HandsOn()),
+                );
+              },
+              child: const Text("Hands On"),
             ),
           ],
         ),
